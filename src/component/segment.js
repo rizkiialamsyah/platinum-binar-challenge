@@ -1,6 +1,6 @@
 import React from "react";
 
-const segment = ({children, ...props}) => {
+const Segment = ({children, ...props}) => {
     return (
         <div {...props}>
             {children}
@@ -8,4 +8,4 @@ const segment = ({children, ...props}) => {
     )
 }
 
-export default segment
+export default Segment

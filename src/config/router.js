@@ -1,4 +1,8 @@
+import CarList from "../pages/List-car";
+import Home from "../pages/home";
 import Login from "../pages/login";
+import Addnewcar from "../pages/add-new-car";
+import Editcar from "../pages/edit-car";
 
 export const publicrouting = (props) => {
     return [
@@ -10,7 +14,10 @@ export const publicrouting = (props) => {
 
 export const privaterouting = (props) => {
     return [
-        { index: true, path: '/home', element: <div>BERHASIL LOGIN</div> },
+        { index: true, path: '/home', element: <Home/> },
+        { index: true, path: '/listcar', element: <CarList/> },
+        { index: true, path: '/addnewcar', element: <Addnewcar/> },
+        { index: true, path: '/editcar', element: <Editcar/> },
         { index: true, path: '*', element: <div>Halaman Not Found</div> },
     ]
 }

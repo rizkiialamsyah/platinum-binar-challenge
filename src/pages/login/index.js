@@ -24,9 +24,10 @@ const Login = () =>
         Services().post('https://bootcamp-rent-cars.herokuapp.com/admin/auth/login', { ...state }).then(response => {
             localStorage.setItem("ACCESS_TOKEN", response?.data?.access_token)
             window.location.replace('/home')
+            console.log(response)
         }).catch(err => console.log(err.response.data.message))
     }
-    
+
    return (
     <div className="d-flex">     
         <div>
@@ -40,18 +41,17 @@ const Login = () =>
             <Form onSubmit={handleSubmit}>
                 <Row className="gap-4">
                     <Col md={10}>
-                        <Input onChange={handleChange} className="form-control" label={"Email"} required placeholder="Input Email"/>
+                        <Input onChange={handleChange} className="form-control" name="email" label={"Email"} required placeholder="Input Email"/>
 
                     </Col>
                     <Col md={10}>
-                        <Input onChange={handleChange} className="form-control" label={"Password"} required type="password" placeholder="input Password"/>
+                        <Input onChange={handleChange} className="form-control" name="password" label={"Password"} required type="password" placeholder="input Password"/>
                     </Col>
                     <Col md={10}>
                     <Button type='submit' className='w-100' style={{ backgroundColor: "#0D28A6" }}>Sign In</Button>
                     </Col>
                 </Row>
             </Form>
-    
         </div>
     </div>
     )
