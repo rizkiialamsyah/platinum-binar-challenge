@@ -3,6 +3,7 @@ import Home from "../pages/home";
 import Login from "../pages/login";
 import Addnewcar from "../pages/add-new-car";
 import Editcar from "../pages/edit-car";
+import Tes from "../pages/tes-new/index copy";
 
 export const publicrouting = (props) => {
     return [
@@ -17,6 +18,7 @@ export const privaterouting = (props) => {
         { index: true, path: '/home', element: <Home/> },
         { index: true, path: '/listcar', element: <CarList/> },
         { index: true, path: '/addnewcar', element: <Addnewcar/> },
+        { index: true, path: '/tes', element: <Tes/> },
         { index: true, path: '/editcar', element: <Editcar/> },
         { index: true, path: '*', element: <div>Halaman Not Found</div> },
     ]
